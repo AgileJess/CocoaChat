@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+
+
+@objc(LoginViewController)
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
