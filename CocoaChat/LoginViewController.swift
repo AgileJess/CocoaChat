@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
 
-    @IBAction func onAnonymousTapped(_ sender: Any) {
+    @IBAction func onAnonymousTapped(_ sender: UIButton) {
         print("AnonymousTapped")
         
         FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
