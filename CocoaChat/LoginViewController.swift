@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+
+
+@objc(LoginViewController)
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,7 @@ class LoginViewController: UIViewController {
         
     }
 
-    @IBAction func onAnonymousTapped(_ sender: Any) {
+    @IBAction func onAnonymousTapped(_ sender: UIButton) {
         print("AnonymousTapped")
         
         FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
